@@ -1,0 +1,154 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+.container .v1,.v2,.v3,.v4, p, h2, input{
+    display: none;
+}
+
+
+.nav {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.v1, .v2, .v3, .v4 {
+    margin-left: 25%;
+    filter: brightness(40%);
+
+}
+
+p.t1, p.t2, p.t3, p.t4 {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    font-size: 30px;
+    z-index: 999;
+    color: white;
+    width: 30%;
+    text-shadow: 0px 0px 2px rgb(0, 0, 0);
+    font-weight: 600px;
+    
+}
+
+h2.t1, h2.t2, h2.t3, h2.t4 {
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    font-size: 50px;
+    z-index: 999;
+    width: 30%;
+    font-weight: 600px;  
+    font-family: serif;
+}
+
+.char1, .char2, .char3, .char4 {
+    position: absolute;
+    right: -30%;
+    z-index: 998;
+    opacity: 0.2;
+    filter: drop-shadow(3px 3px 5px rgb(141, 141, 141));
+    height: 80%;
+    top: 20%;
+}
+
+.char1{
+    height: 80%;
+    top: 20%;
+}
+
+.char2{
+    height: 90%;
+    top: 15%;
+    transition: 0s;
+    right: -40%;
+}
+
+.char4{
+    height: 90%;
+    top: 15%;
+}
+
+
+
+h2.t1 {
+    color: greenyellow;
+    text-shadow: 5px 5px 10px rgb(0, 89, 4);
+}
+h2.t2 {
+    color: rgb(226, 39, 255);
+    text-shadow: 5px 5px 15px rgb(56, 0, 89);
+}
+h2.t3 {
+    color: rgb(24, 255, 209);
+    text-shadow: 5px 5px 10px rgb(24, 49, 170);
+}
+h2.t4 {
+    color: rgb(35, 57, 255);
+    text-shadow: 4px 4px 15px rgb(58, 20, 210);
+}
+
+label > img {
+    width: 80px;
+    margin: 30px;
+    filter: drop-shadow(2px 2px 5px hsl(0, 0%, 16%));
+    cursor: pointer;
+    z-index: 999;
+}
+
+label > img:hover{
+    transition: 0.5;
+    filter: drop-shadow(2px 2px 7px rgb(255, 255, 255));
+    transition: 0.5s;
+
+}
+
+.sombra {
+    position: absolute;
+    height: 100%;
+    width: 70%;
+    background: linear-gradient(to right, rgb(0, 0, 0)15%, transparent 30%);
+    background-size: 200% 200%;
+    z-index: 997;
+    left: 10%;
+
+}
+
+.logo {
+    /* filter: drop-shadow(2px 2px 1px rgb(255, 255, 255)); */
+    position: absolute;
+    z-index: 999;
+    width: 25%;
+    left: 30px;
+}
+
+
+
+
+#vid1:checked ~ .v1{display: block;}
+#vid1:checked ~ .t1 {display: block;}
+#vid1:checked ~ .char1 {opacity: 1; right: 10%; transition: 1.5s;}
+
+#vid2:checked ~ .v2 {display: block;}
+#vid2:checked ~ .t2 {display: block;}
+#vid2:checked ~ .char2 {opacity: 1; right: 8%; transition: 1.5s;}
+
+#vid3:checked ~ .v3{display: block;}
+#vid3:checked ~ .t3{display: block;}
+#vid3:checked ~ .char3 {opacity: 1; right: 10%; transition: 1.5s;}
+
+#vid4:checked ~ .v4{display: block;}
+#vid4:checked ~ .t4{display: block;}
+#vid4:checked ~ .char4 {opacity: 1; right: 10%; transition: 1.5s;}
